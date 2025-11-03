@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Editor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../styling/style.css">
+</head>
+
+<body>
+    <div id="responsiveWarning" class="responsive-warning">
+        <div>
+            <h2>Not for responsive devices</h2>
+            <p>Please open using a bigger screen.</p>
+        </div>
+    </div>
+
+    <div>
+
+        <button id="downloadCanvasBtn" class="downloadBtn">Download JPG</button>
+    </div>
+
+    <div class="Editors-Place">
+
+        <div id="elementsPanel" class="elements-panel">
+            <h3>Elements</h3>
+            <div id="elementsList" class="elements-list"></div>
+        </div>
+
+
+
+        <div class="canvas-container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="canvas" data-canvas="1"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="canvas" data-canvas="2"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="canvas" data-canvas="3"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="toolbar">
+                <button id="addTextBtn" class="btn">Add Text</button>
+                <button id="addImageBtn" class="btn">Add Image</button>
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+
+            </div>
+
+
+            <div id="imageModifier" class="image-modifier hidden">
+                <h3>Image Modifications</h3>
+                <div class="modifier-group">
+                    <label>Element Align:</label>
+                    <select id="elementAlignImage">
+                        <option value="default">Default</option>
+                        <option value="left">Left</option>
+                        <option value="center">Center</option>
+                        <option value="right">Right</option>
+                        <option value="top">Top</option>
+                        <option value="middle">Middle</option>
+                        <option value="bottom">Bottom</option>
+                    </select>
+                </div>
+                <button id="deleteImage" class="btn btn-delete">Delete</button>
+            </div>
+
+            <div id="textModifier" class="text-modifier hidden">
+                <h3>Text Modifications</h3>
+
+                <div class="modifier-group">
+                    <label>Text:</label>
+                    <textarea id="textContent" placeholder="Edit text"></textarea>
+                </div>
+                <div class="modifier-group">
+                    <label>Font Size:</label>
+                    <input type="number" id="fontSize" min="10" max="100" value="16">
+                </div>
+                <div class="modifier-group">
+                    <label>Font Family:</label>
+                    <select id="fontFamily">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                </div>
+                <div class="modifier-group">
+                    <label>Color:</label>
+                    <input type="color" id="textColor" value="#000000">
+                </div>
+                <div class="modifier-group">
+                    <label>Bold:</label>
+                    <input type="checkbox" id="textBold">
+                </div>
+                <div class="modifier-group">
+                    <label>Italic:</label>
+                    <input type="checkbox" id="textItalic">
+                </div>
+                <div class="modifier-group">
+                    <label>Underline:</label>
+                    <input type="checkbox" id="textUnderline">
+                </div>
+                <div class="modifier-group">
+                    <label>Align:</label>
+                    <select id="textAlign">
+                        <option value="left">Left</option>
+                        <option value="center">Center</option>
+                        <option value="right">Right</option>
+                        <option value="justify">Justify</option>
+                    </select>
+                </div>
+                <div class="modifier-group">
+                    <label>Element Align:</label>
+                    <select id="elementAlignText">
+                        <option value="default">Default</option>
+                        <option value="left">Left</option>
+                        <option value="center">Center</option>
+                        <option value="right">Right</option>
+                        <option value="top">Top</option>
+                        <option value="middle">Middle</option>
+                        <option value="bottom">Bottom</option>
+                    </select>
+                </div>
+
+                <button id="deleteText" class="btn btn-delete">Delete</button>
+            </div>
+
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="../script/swiperSetup.js"></script>
+        <script src="../script/utils.js"></script>
+        <script src="../script/dragResize.js"></script>
+        <script src="../script/alignment.js"></script>
+        <script src="../script/textElements.js"></script>
+        <script src="../script/imageElements.js"></script>
+        <script src="../script/elementsPanel.js"></script>
+        <script src="../script/main.js"></script>
+        <script src="../script/downloadFunction.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+const elementsList = document.getElementById("elementsList");
+
+function addElementPanelEntry(element) {
+    const canvas = element.closest('.canvas');
+    const slideNumber = canvas ? parseInt(canvas.dataset.canvas || '1') : 1;
+    const type = element.tagName === 'IMG' ? 'Image' : 'Text';
+    elementCounter += 1;
+
+    const item = document.createElement('div');
+    item.className = 'element-item';
+    item.textContent = `${type}-${elementCounter} :  (Slide ${slideNumber})`;
+
+    item.targetElement = element;
+    element.panelItem = item;
+
+    elementsList.appendChild(item);
+
+    item.addEventListener('click', () => {
+        swiper.slideTo(slideNumber - 1);
+            if (type === 'Image') {
+                selectImageElement(element);
+            } else {
+                selectTextElement(element);
+            }
+            if (element.resizeHandle) element.resizeHandle.style.display = 'block';
+    });
+
+   
+}
