@@ -1,5 +1,6 @@
 
-let elementCounter = 0; 
+let imageCounter = 0; 
+let textCounter = 0; 
 
 (function addDefaultWelcomeText() {
     const firstCanvas = document.querySelector('.canvas[data-canvas="1"]');
