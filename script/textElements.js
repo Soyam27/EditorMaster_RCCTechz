@@ -50,7 +50,9 @@ function selectTextElement(element) {
     document.getElementById("textAlign").value = element.style.textAlign || "left";
     selectedImageElement = null;
     document.getElementById("imageModifier").classList.add("hidden");
-
+    element.addEventListener("input", () => {
+        document.getElementById("textContent").value = element.textContent;
+    });
 }
 
 
