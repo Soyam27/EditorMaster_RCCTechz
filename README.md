@@ -88,6 +88,7 @@ EditorMaster/
 ## Notes & limitations
 
 - The canvas is designed for a phone aspect ratio and fixed size (configured in CSS). You can adjust sizes in `styling/style.css`.
-- Download jpg button will work upon uncommenting this "<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>" from the index.html file
+- Download jpg button will work upon uncommenting this `<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>` from the index.html file
+
 
 
