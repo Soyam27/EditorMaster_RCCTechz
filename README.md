@@ -14,6 +14,27 @@ This is a pure front‑end project; no build step or server required.
 - Optional: run from a local server (sometimes helps with image security/CORS when exporting):
 	- You can use any static server you prefer (e.g., VS Code Live Server extension).
 
+## Project structure
+
+```
+EditorMaster/
+├─ pages/
+│  └─ index.html         
+├─ public/
+├─ script/
+│  └─alignment.js
+│  └─downloadFunction.js
+│  └─dragResize.js
+│  └─elementsPanel.js
+│  └─imageElements.js
+│  └─main.js
+│  └─swiperSetup.js
+│  └─textElements.js
+│  └─utils.js
+├─ styling/
+│  └─ style.css           
+└─ README.md              
+```
 
 
 ## Features
@@ -50,27 +71,7 @@ This is a pure front‑end project; no build step or server required.
 - Export
 	- Download the active canvas as JPG (via html2canvas).
 
-## Project structure
 
-```
-EditorMaster/
-├─ pages/
-│  └─ index.html         
-├─ public/
-├─ script/
-│  └─alignment.js
-│  └─downloadFunction.js
-│  └─dragResize.js
-│  └─elementsPanel.js
-│  └─imageElements.js
-│  └─main.js
-│  └─swiperSetup.js
-│  └─textElements.js
-│  └─utils.js
-├─ styling/
-│  └─ style.css           
-└─ README.md              
-```
 
 
 
@@ -89,6 +90,7 @@ EditorMaster/
 
 - The canvas is designed for a phone aspect ratio and fixed size (configured in CSS). You can adjust sizes in `styling/style.css`.
 - Download jpg button will work upon uncommenting this `<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>` from the index.html file
+
 
 
 
