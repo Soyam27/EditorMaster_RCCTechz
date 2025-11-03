@@ -58,11 +58,11 @@ EditorMaster/
 - Text editing & styling
 	- Inline editing: double‑click a text element to edit; press outside to save.
 	- Panel controls:
-		- Text (multi-line)
+		- Text 
 		- Font size, family, color
 		- Bold, Italic, Underline
 		- Text alignment: left/center/right/justify (affects the content inside the box)
-	- Newlines from the panel’s text area are preserved on canvas.
+	
 
 - Alignment tools (element positioning)
 	- Toolbar buttons for Left/Center/Right and Top/Middle/Bottom.
@@ -90,6 +90,7 @@ EditorMaster/
 
 - The Website is designed only for devices with screen width 900px and above.
 - Download jpg button will work upon uncommenting this `<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>` from the index.html file
+
 
 
 
