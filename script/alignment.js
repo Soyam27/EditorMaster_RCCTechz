@@ -51,4 +51,5 @@ function alignSelected(direction) {
 
   ele.style.left = `${left}px`;
   ele.style.top = `${top}px`;
+  ele.updateHandlePosition();
 }

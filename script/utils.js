@@ -26,9 +26,12 @@ function deselectAll() {
 
 document.querySelectorAll(".canvas").forEach((canvas) => {
     canvas.addEventListener("click", (e) => {
-        if (e.target === canvas) {
-            selectedTextElement.style.cursor = "move";
-            selectedTextElement.contentEditable = "false";
+        const withinElement = e.target.closest('.text-element, .image-element');
+        if (!withinElement) {
+            if (selectedTextElement) {
+                selectedTextElement.style.cursor = "move";
+                selectedTextElement.contentEditable = "false";
+            }
             deselectAll();
         }
     });

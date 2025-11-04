@@ -46,8 +46,11 @@ function selectImageElement(element) {
         element.resizeHandle.style.display = "block";
         element.updateHandlePosition();
     }
+    zIndex += 1;
+    element.style.zIndex = zIndex;
     document.getElementById("textModifier").classList.add("hidden");
     selectedTextElement = null;
+
 }
 
 

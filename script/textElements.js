@@ -38,6 +38,8 @@ function selectTextElement(element) {
     element.classList.add("selected");
     selectedTextElement = element;
     element.resizeHandle.style.display = "block";
+    zIndex += 1;
+    element.style.zIndex = zIndex;
     const modifier = document.getElementById("textModifier");
     modifier.classList.remove("hidden");
     document.getElementById("textContent").value = element.textContent;
