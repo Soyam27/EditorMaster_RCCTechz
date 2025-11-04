@@ -48,8 +48,11 @@ function alignSelected(direction) {
       top = Math.max(0, cH - eH-15);
       break;
   }
+  elementAlignText.value = 'default';
+      elementAlignImage.value = 'default';
 
   ele.style.left = `${left}px`;
   ele.style.top = `${top}px`;
   ele.updateHandlePosition();
+
 }
