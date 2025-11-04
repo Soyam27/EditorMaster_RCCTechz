@@ -14,6 +14,12 @@ This is a pure front‑end project; no build step or server required.
 - Optional: run from a local server (sometimes helps with image security/CORS when exporting):
 	- You can use any static server you prefer (e.g., VS Code Live Server extension).
 
+
+ ## Notes & limitations
+
+- The Website is designed only for devices with screen width 900px and above.
+- Download jpg button will work upon uncommenting this `<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>` from the index.html file
+
 ## Project structure
 
 ```
@@ -86,10 +92,8 @@ EditorMaster/
 - Elements list: Use it to jump to and select items quickly (also switches slide if needed).
 - Export: Click “Download JPG” to save the currently visible slide’s canvas.
 
-## Notes & limitations
 
-- The Website is designed only for devices with screen width 900px and above.
-- Download jpg button will work upon uncommenting this `<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>` from the index.html file
+
 
 
 
