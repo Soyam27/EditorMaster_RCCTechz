@@ -4,10 +4,16 @@ downloadCanvasBtn.addEventListener('click', downloadCurrentCanvasJPG);
 async function downloadCurrentCanvasJPG() {
     deselectAll();
     const canvasDiv = getCurrentCanvas();
-    const exportCanvas = await html2canvas(canvasDiv, {
-        backgroundColor: '#ffffff',
-        scale: 2,
-    });
+    try {
+        const exportCanvas = await html2canvas(canvasDiv, {
+            backgroundColor: '#ffffff',
+            scale: 2,
+        });
+        
+    } catch (error) {
+        alert('Uncomment the html2canvas script in index.html to enable download feature.');
+        return;
+    }
     const dataURL = exportCanvas.toDataURL('image/jpeg', 0.92);
     const activeSlide = document.querySelector('.swiper-slide-active .canvas');
     const slideNum = activeSlide ? activeSlide.getAttribute('data-canvas') : '1';

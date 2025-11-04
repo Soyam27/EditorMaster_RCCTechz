@@ -15,7 +15,6 @@ body {
 }
 .Editors-Place {
     width: 100%;
-
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -37,7 +36,6 @@ body {
     gap: 10px;
 }
 
-
 .downloadBtn{
     position: absolute;
     top:20px;
@@ -54,6 +52,13 @@ body {
     background-color: #0056b3; 
 }
 
+@media (max-height: 800px) {
+   .downloadBtn{
+    top:0px;
+    right: 0px;
+   }
+    
+}
 .btn {
     padding: 20px;
     border: 2px solid black;
